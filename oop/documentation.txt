@@ -1,0 +1,25 @@
+instance attribute = attribute yang menempel di objek nya
+
+- instance attribute hanya akan berada di objek hasil dari instanisasi dari class, dan tidak akan
+  ada di objek lain walaupun dari class yang sama
+
+- jika kita ingin membuat attribut yang secara default (bawaan) ada di semua objek hasil instanisasi,
+  maka kita perlu membuat Class Attribut, yaitu attribut yang di definisikan di dalam class nya.
+
+Class dengan Methods
+- Methods adalah function yang berada dalam class dan bisa di panggil oleh objects.
+
+Parameter self
+- Parameter self sangat penting !
+- self adalah Parameter khusus yang merujuk pada instance/object yang sedang memanggil Method.
+- Parameter di Method tidak hanya self, kita bisa menambahkan Parameter lain seperti function biasnya
+- Semua yang bisa kita lakukan di function bisa kita lakukan di Method 
+
+Naming Convetions
+- Class Names: PascalCase, misal Mahasiswa, MataPelajaran, Mobil, KategoriBarang
+- Method Names: snake_case, misal perkenalan(), lari_kedepan(), jalankan(), dll.
+- Attribute Names: snake_case, misal nama, nama_depan, nama_belakang, dll
+
+Construktor = Method spesial yang otomatis dipanggil saat object dibuat
+- Dalam python, Construktor adalah Method --init--().
+- Construktor digunakan untuk initialize (setup awal) object dengan data yang diperlukan.

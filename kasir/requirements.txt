@@ -1,0 +1,158 @@
+import datetime
+
+# Logo Banner Toko (ASCII Art)
+print(""" 
+▄▄▄   ▄▄▄       ▄▄▄       ▄▄▄   ▄▄▄▄   ▄▄▄▄▄▄▄   ▄▄▄▄▄▄▄▄▄ 
+████▄████       ████▄  ▄████ ▄██▀▀██▄ ███▀▀███▄ ▀▀▀███▀▀▀ 
+ ▀█████▀        ███▀████▀███ ███  ███ ███▄▄███▀   ███    
+▄███████▄ ▀▀▀▀▀ ███  ▀▀  ███ ███▀▀███ ███▀▀██▄     ███    
+███▀ ▀███       ███      ███ ███  ███ ███  ▀███    ███    
+                                                        
+""")
+print("=-=" * 35)
+
+# Database Produk (Nested Dictionary)
+data_produk = {
+    "12345": {"nama": "Minyak", "harga": 40000, "stok": 10},
+    "22345": {"nama": "Aqua", "harga": 3500, "stok": 11},
+    "32345": {"nama": "Mie", "harga": 4000, "stok": 13},
+    "42345": {"nama": "Sabun", "harga": 10000, "stok": 12},
+    "52345": {"nama": "Sarden", "harga": 20000, "stok": 10}
+}
+
+# 1. Input Barcode
+bacode = input("Masukan barcode / kode barang: ")
+
+# 2. Pengecekan Keberadaan Barcode
+if bacode in data_produk:
+    produk = data_produk[bacode]
+    print(f"Barang ditemukan: {produk['nama']} (Rp{produk['harga']})")
+    print(f"Stok tersedia  : {produk['stok']}")
+
+    # 3. Input Jumlah Beli
+    qty = int(input("Masukan jumlah beli: "))
+
+    # 4. Validasi Jumlah Beli dan Stok
+    if qty > produk['stok']:
+        print("\n❌ Gagal: Stok produk tidak cukup!")
+    elif qty <= 0:
+        print("\n❌ Gagal: Minimal beli 1!")
+    else:
+        # Perhitungan Total Belanja
+        total_belanja = qty * produk['harga']
+        print(f"Total Belanja  : Rp{total_belanja}")
+
+        # 5. Input Nominal Pembayaran
+        uang_diterima = int(input("Masukan jumlah pembayaran: Rp"))
+
+        # 6. Validasi Uang Pembayaran
+        if uang_diterima < total_belanja:
+            print("\n❌ Gagal: Uang pembayaran tidak cukup!")
+        else:
+            # Perhitungan Kembalian & Pengurangan Stok
+            kembalian = uang_diterima - total_belanja
+            produk['stok'] -= qty   
+            waktu_sekarang = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+            # 7. Cetak Struk Transaksi
+            print("\n" + "="*32)
+            print("           X-MART")
+            print("="*32)
+            print(f"Tanggal : {waktu_sekarang}")
+            print("-"*32)
+            print(f"{produk['nama']}")
+            print(f"  {qty} x {produk['harga']} = Rp{total_belanja}")
+            print("-"*32)
+            print(f"TOTAL     : Rp{total_belanja}")
+            print(f"BAYAR     : Rp{uang_diterima}")
+            print(f"KEMBALIAN : Rp{kembalian}")
+            print("="*32)
+            print("    TERIMA KASIH ATAS")
+            print("      KUNJUNGAN ANDA")
+            print("="*32)
+            
+else:
+    print("❌ Barcode tidak ditemukan di database!")
+
+
+
+
+import datetime
+
+Mengimpor pustaka (library) standar Python datetime untuk pengoperasian waktu dan tanggal transaksi secara real-time.
+
+print("""...""")
+
+Mencetak grafik teks ASCII sebagai header antarmuka visual toko (X-MART).
+
+print("=-=" * 35)
+
+Mencetak pembatas visual berupa pengulangan karakter =-= sebanyak 35 kali.
+
+data_produk = { ... }
+
+Inisialisasi variabel data_produk menggunakan tipe data Nested Dictionary (kamus bersarang) sebagai Database Dummy (Mock Data). Key utama berisi string barcode, dan value berisi dictionary properti produk (nama, harga, stok).
+
+bacode = input(...)
+
+Membaca masukan dari pengguna (kasir) melalui keyboard/barcode scanner dan menyimpannya ke variabel bacode sebagai string.
+
+if bacode in data_produk:
+
+Percabangan pertama (Conditional Level 1): Mengecek apakah kode masukan ada di dalam daftar key dictionary data_produk.
+
+produk = data_produk[bacode]
+
+Mengambil objek dictionary produk yang teridentifikasi dan menyimpannya ke variabel lokal produk.
+
+print(f"Barang ditemukan...")
+
+Menampilkan informasi rincian produk (nama, harga, stok) menggunakan sintaks f-string.
+
+qty = int(input(...))
+
+Meminta input kuantitas barang yang dibeli dan melakukan type casting konversi tipe data dari string ke integer.
+
+if qty > produk['stok']:
+
+Percabangan kedua (Conditional Level 2): Validasi batas atas. Memastikan kuantitas beli tidak melebihi stok yang tersedia.
+
+elif qty <= 0:
+
+Validasi batas bawah: Memastikan kuantitas beli bernilai positif (minimal 1 unit).
+
+else:
+
+Jalur yang dieksekusi jika jumlah pembelian sah (valid).
+
+total_belanja = qty * produk['harga']
+
+Rumus matematika subtotal: Pengalian kuantitas beli (qty) dengan harga satuan barang (produk['harga']).
+
+uang_diterima = int(...)
+
+Menerima masukan uang pembayaran tunai dari pelanggan dan mengonversinya ke tipe data integer.
+
+if uang_diterima < total_belanja:
+
+Percabangan ketiga (Conditional Level 3): Memeriksa apakah nominal uang bayar kurang dari total transaksi.
+
+kembalian = uang_diterima - total_belanja
+
+Rumus matematika kembalian: Pengurangan nominal uang yang diterima dengan total belanja.
+
+produk['stok'] -= qty
+
+Operasi Update Stok: Mengurangi nilai stok pada dictionary produk terkait (produk['stok'] = produk['stok'] - qty).
+
+waktu_sekarang = datetime...
+
+Mengambil tanggal & jam sistem lokal saat ini dan mengubah formatnya menjadi format string YYYY-MM-DD HH:MM:SS.
+
+print(...) (Bagian Struk)
+
+Rangkaian perintah pencetakan struktur struk transaksi fisik berbasis teks ASCII.
+
+else: (Terluar)
+
+Penanganan kondisi gagal (fallback) ketika kode barcode yang diinputkan tidak ditemukan di dalam database.
