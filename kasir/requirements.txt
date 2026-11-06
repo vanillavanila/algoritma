@@ -91,7 +91,8 @@ Mencetak pembatas visual berupa pengulangan karakter =-= sebanyak 35 kali.
 
 data_produk = { ... }
 
-Inisialisasi variabel data_produk menggunakan tipe data Nested Dictionary (kamus bersarang) sebagai Database Dummy (Mock Data). Key utama berisi string barcode, dan value berisi dictionary properti produk (nama, harga, stok).
+Inisialisasi variabel data_produk menggunakan tipe data Nested Dictionary (kamus bersarang) sebagai Database Dummy 
+(Mock Data). Key utama berisi string barcode, dan value berisi dictionary properti produk (nama, harga, stok).
 
 bacode = input(...)
 

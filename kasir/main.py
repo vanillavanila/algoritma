@@ -1,5 +1,4 @@
 import datetime
-
 print(""" 
                                                                    
 ▄▄▄   ▄▄▄       ▄▄▄      ▄▄▄   ▄▄▄▄   ▄▄▄▄▄▄▄   ▄▄▄▄▄▄▄▄▄ 
@@ -19,7 +18,6 @@ data_produk = {
     "42345": {"nama": "Sabun", "harga": 10000, "stok": 12},
     "52345": {"nama": "Sarden", "harga": 20000, "stok": 10}
 }
-
 
 bacode = input("Masukan barcode / kode barang: ")
 

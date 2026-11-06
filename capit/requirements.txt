@@ -1,0 +1,65 @@
+Deskripsi Dokumen:
+Dokumen ini berisi penjelasan teknis, bedah baris kode, dan alur logika dari program simulasi "Mesin Capit" (Claw Machine) yang menerapkan aturan wajib melakukan 5 kali percobaan input berturut-turut sebelum sistem melakukan validasi hasil akhir (True/False).
+
+1. Spesifikasi Teknis & Alur Kerja (Flowchart Logika)
+Komponen	Keterangan
+Modul Utama	random (untuk simulasi peluang hoki acak)
+Struktur Kontrol	while loop (untuk pengulangan tepat 5 kali)
+Kondisional	if-else (untuk validasi akhir menang/kalah)
+Return Value	Boolean (True jika berhasil, False jika gagal)
+2. Kode Sumber Lengkap (Source Code)
+Python
+
+import random
+
+def simulasi_mesin_capit():
+    maksimal_coba = 5
+    percobaan = 0
+    
+    print("=== SELAMAT DATANG DI MESIN CAPIT ===")
+    print(f"Anda harus mencoba sebanyak {maksimal_coba} kali berturut-turut untuk melihat hasilnya!\n")
+    
+    # User harus mengulang sebanyak 5 kali
+    while percobaan < maksimal_coba:
+        percobaan += 1
+        input(f"Tekan [Enter] untuk melakukan capit ke-{percobaan}...")
+        
+        # Simulasi aksi capit
+        print(f"Mencapit... (Percobaan {percobaan}/5)")
+    
+    print("\n--- 5 kali percobaan selesai! Mengecek hasil akhir... ---")
+    
+    # Menentukan menang atau kalah setelah 5 kali mencoba
+    hoki = random.choice([True, False]) 
+    
+    if hoki:
+        print("Selamat! Anda BERHASIL mendapatkan hadiahnya! (True)")
+        return True
+    else:
+        print("Sayang sekali, capitannya meleset. Gagal! (False)")
+        return False
+
+# Jalankan mesin
+hasil_akhir = simulasi_mesin_capit()
+print(f"Status Akhir: {hasil_akhir}")
+3. Bedah Bagian Kode (Line-by-Line Breakdown)
+A. Inisialisasi & Pengaturan Awal
+import random: Memuat pustaka Python untuk menghasilkan nilai acak.
+
+def simulasi_mesin_capit():: Membungkus seluruh logika program ke dalam sebuah fungsi modular agar mudah dipanggil ulang.
+
+maksimal_coba = 5 & percobaan = 0: Variabel konstanta batas maksimal tarikan dan penghitung (counter) awal.
+
+B. Blok Perulangan Wajib (While Loop)
+while percobaan < maksimal_coba:: Memastikan siklus capit berjalan tepat 5 kali. Program menolak berhenti di tengah jalan sebelum mencapai batas ini.
+
+percobaan += 1: Menambahkan nilai penghitung setiap kali putaran berjalan.
+
+input(...): Menghentikan eksekusi sementara hingga pengguna menekan tombol Enter.
+
+C. Validasi & Evaluasi Akhir
+Berada di luar perulangan while, artinya blok ini baru dieksekusi setelah 5 tarikan terpenuhi sepenuhnya.
+
+hoki = random.choice([True, False]): Menentukan status keberhasilan secara acak.
+
+return True / False: Mengembalikan nilai boolean ke pemanggil fungsi untuk menentukan status akhir program.

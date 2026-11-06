@@ -140,17 +140,109 @@
 
 # kalkulator()
 
-username = ('indra')
-password = ('123')
+# username = ('indra')
+# password = ('123')
 
-input_user = input("Masukan username: ")
-input_pass = input("Masukan password: ")
+# input_user = input("Masukan username: ")
+# input_pass = input("Masukan password: ")
 
-if username == input_user and password == input_pass:
-    print("berhasil  login")
-elif username != input_user:
-    print("username tidak terdaptar")
-elif password != input_pass:
-    print("password salah")
+# if username == input_user and password == input_pass:
+#     print("berhasil  login")
+# elif username != input_user:
+#     print("username tidak terdaptar")
+# elif password != input_pass:
+#     print("password salah")
+# else:
+#     print("username tidak terdaftar")
+
+
+
+# print("=" * 40)
+# print("=== THANKS MART ===")
+# print("=" * 40)
+
+# data_produk = {
+#         "0011" : {"nama": "nasi", "harga": 50000, "stok": 100},
+#         "0012" : {"nama": "nasi", "harga": 50000, "stok": 100},
+#         "0013" : {"nama": "nasi", "harga": 50000, "stok": 100},
+#         "0014" : {"nama": "nasi", "harga": 50000, "stok": 100},
+#         "0015" : {"nama": "nasi", "harga": 50000, "stok": 100}
+#     }   
+
+
+# barcode = input("masukan bbarcode: ")
+
+# if barcode in data_produk:
+#     produk = data_produk[barcode]
+
+#     print(f"\n Nama barang = {produk['nama']} (harga = Rp{produk['harga']}) ")
+#     print(f"\n Stok barang = {produk['stok']}")
+
+#     jumlah_beli = int(input("Masukan jumlah barang yang di beli: "))
+
+#     if jumlah_beli > produk['stok']:
+#         print("\n Stok tidak mencukupi...")
+#     elif jumlah_beli <=0:
+#         print("\n Minimal beli satu barang...")
+#     else:
+#         # ambil total belanja
+#         total_belanja = jumlah_beli * produk["harga"]
+#         print(f"\n Total harga Rp{total_belanja}")
+
+#     uang = int(input("masukan uang bayar: "))
+
+#     if uang < total_belanja:
+#         print("uang tidak cukup")
+#     else:
+#         kembalian = uang - total_belanja
+
+#         print("===THANKS MART===")
+#         print("=-=" * 35)
+#         print(f"\n Nama Produk: {produk['nama']}")
+#         print(f"\n Jumlah: {jumlah_beli}")
+#         print(f"\n total harga: Rp{total_belanja}")
+#         print(f"\n bayar: Rp{uang}")
+#         print(f"\n kembalian: Rp{kembalian}")
+#         print("=-=" * 30)
+#         print("Terimakasih sudah berbelkanja :)")
+# else:
+#     print("===Produk tidak ada===")
+
+
+list_produk = { 
+    "0001": {"nama": "laptop", "harga": 1000000, "stok": 5},
+    "0002": {"nama": "hp", "harga": 2000000, "stok": 2},
+    "0003": {"nama": "ipad", "harga": 5000000, "stok": 3}
+ }
+
+barcode = input("Masukan barcode: ")
+
+if barcode in list_produk:
+    produk = list_produk[barcode]
+
+    print(f"nama barang {produk['nama']} harga (Rp{produk['harga']})")
+    print(f"Stok {produk['stok']}")
+
+    jumlah = int(input("Masukan jumlah barang: "))
+
+    if jumlah > produk['stok']:
+        print(f"Stok tidak cukup")
+    elif jumlah <= 0:
+        print("Minimal beli 1 barang..")
+    else:
+        total_belanja = jumlah * produk['harga']
+        print(f"Total belanja (Rp{total_belanja})")
+
+    bayar = int(input("Masukan uang: "))
+
+    if bayar < total_belanja:
+        print(f"Uang anda tidak cukup")
+    else:
+        kembalian = bayar - total_belanja
+
+        print(f"kembalian (Rp{kembalian}) ")
+
+        print("thank you")
+
 else:
-    print("username tidak terdaftar")
+    print("Barang tidak ada")
