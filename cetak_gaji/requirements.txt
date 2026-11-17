@@ -1,0 +1,106 @@
+STUDI KASUS
+
+PT Maju Sejahtera merupakan sebuah perusahaan yang memiliki sejumlah karyawan dengan bidang pekerjaan
+dan jabatan yang berbeda-beda. Setiap bulan, perusahaan wajib memberikan gaji kepada seluruh karyawan
+berdasarkan jabatan dan jumlah jam kerja yang telah diselesaikan selama satu bulan.
+
+Selama ini, proses perhitungan gaji karyawan masih dilakukan secara manual oleh bagian administrasi 
+menggunakan kalkulator dan pencatatan pada buku kerja. Proses tersebut membutuhkan waktu cukup lama, 
+terutama ketika perusahaan harus menghitung gaji puluhan hingga ratusan karyawan. Selain itu, perhitungan 
+secara manual berpotensi menimbulkan kesalahan, seperti kesalahan menghitung upah lembur, menentukan potongan pajak, 
+maupun menghitung total gaji yang harus dibayarkan.
+
+Untuk mengatasi permasalahan tersebut, pimpinan perusahaan meminta bagian administrasi untuk membuat sebuah program 
+komputer sederhana yang dapat membantu proses penghitungan gaji karyawan secara otomatis.
+Program yang akan dibuat harus mampu menerima data setiap karyawan yang akan dihitung gajinya. Data tersebut meliputi 
+nama lengkap karyawan, nomor induk karyawan (NIK), jabatan, serta jumlah jam kerja selama satu bulan. Setiap karyawan 
+memiliki jabatan yang berbeda, yaitu Administrasi, Teknisi, dan Supervisor. Masing-masing jabatan memiliki ketentuan 
+upah per jam yang berbeda.
+
+
+Perusahaan menetapkan ketentuan upah sebagai berikut:
+1.	Karyawan dengan jabatan Administrasi mendapatkan upah sebesar Rp25.000 untuk setiap jam kerja.
+2.	Karyawan dengan jabatan Teknisi mendapatkan upah sebesar Rp35.000 untuk setiap jam kerja.
+3.	Karyawan dengan jabatan Supervisor mendapatkan upah sebesar Rp50.000 untuk setiap jam kerja.
+
+
+Dalam pelaksanaannya, perusahaan menetapkan bahwa jam kerja normal setiap karyawan adalah maksimal 160 jam 
+dalam satu bulan. Apabila seorang karyawan bekerja lebih dari 160 jam, maka kelebihan jam kerja tersebut 
+akan dihitung sebagai jam lembur. Setiap jam lembur diberikan upah sebesar 1,5 kali dari tarif upah normal 
+sesuai dengan jabatan masing-masing karyawan.
+Sebagai contoh, apabila seorang karyawan bagian Administrasi bekerja selama 175 jam dalam satu bulan, 
+maka karyawan tersebut telah menyelesaikan 160 jam kerja normal dan memiliki kelebihan 15 jam yang dihitung 
+sebagai lembur. Upah normal dihitung berdasarkan 160 jam kerja, sedangkan 15 jam sisanya mendapatkan upah lembur 
+sesuai ketentuan perusahaan.
+Selain memberikan upah berdasarkan jam kerja dan lembur, perusahaan juga menerapkan kebijakan pemotongan pajak 
+penghasilan sebesar 5% dari total penghasilan karyawan sebelum pajak. Total penghasilan sebelum pajak merupakan 
+penjumlahan antara gaji pokok dan upah lembur.
+Setelah seluruh komponen penghasilan dihitung, program harus menentukan besarnya potongan pajak dan menghitung 
+total gaji bersih yang akan diterima oleh setiap karyawan.
+Bagian administrasi menginginkan agar program dapat menampilkan laporan penggajian secara terperinci. 
+Informasi yang harus ditampilkan meliputi nama karyawan, NIK, jabatan, jumlah jam kerja, jumlah jam lembur, 
+tarif upah per jam, gaji pokok, upah lembur, total penghasilan sebelum pajak, jumlah potongan pajak, dan total 
+gaji bersih yang diterima karyawan.
+Program juga harus mampu memproses data lebih dari satu karyawan dalam satu kali penggunaan. Setelah selesai menghitung 
+gaji seorang karyawan dan menampilkan hasilnya, program harus memberikan pertanyaan kepada petugas administrasi apakah 
+masih terdapat karyawan lain yang akan dihitung gajinya.
+Apabila petugas memilih untuk melanjutkan proses, program akan kembali meminta data karyawan berikutnya dan melakukan 
+seluruh proses perhitungan gaji dari awal. Sebaliknya, apabila tidak terdapat karyawan lain yang akan dihitung, program 
+akan mengakhiri proses penggajian.
+Dengan adanya program tersebut, perusahaan berharap proses penghitungan gaji dapat dilakukan dengan lebih cepat, akurat, 
+dan sistematis sehingga bagian administrasi tidak perlu lagi melakukan seluruh perhitungan secara manual.
+
+
+B. Ketentuan Penggajian Perusahaan
+Untuk membantu memahami permasalahan, berikut ketentuan yang berlaku di perusahaan.
+Komponen	Ketentuan
+Upah Administrasi	Rp25.000/jam
+Upah Teknisi	Rp35.000/jam
+Upah Supervisor	Rp50.000/jam
+Jam kerja normal	160 jam/bulan
+Tarif lembur	1,5 x upah normal per jam
+Pajak penghasilan	5% dari penghasilan sebelum pajak
+Ketentuan tambahan:
+•	Jika jam kerja karyawan kurang dari atau sama dengan 160 jam, tidak ada upah lembur.
+•	Jika jam kerja karyawan lebih dari 160 jam, kelebihan jam dihitung sebagai lembur.
+•	Jabatan karyawan menentukan besarnya tarif upah per jam.
+•	Pajak dihitung setelah gaji pokok dan upah lembur dijumlahkan.
+
+
+C. Contoh Ilustrasi Permasalahan
+Untuk memberikan gambaran mengenai permasalahan yang harus diselesaikan, perhatikan contoh berikut.
+Seorang karyawan bernama Andi dengan NIK 001 bekerja pada bagian Teknisi. Selama bulan November, Andi tercatat bekerja 
+selama 175 jam.
+Berdasarkan ketentuan perusahaan, Andi memiliki jam kerja normal sebanyak 160 jam dan kelebihan jam kerja sebanyak 15 jam.
+Petugas administrasi harus menentukan:
+•	Berapa gaji pokok yang diterima Andi?
+•	Berapa upah lembur yang diperoleh Andi?
+•	Berapa total penghasilan Andi sebelum pajak?
+•	Berapa potongan pajak yang harus dibayarkan?
+•	Berapa total gaji bersih yang diterima Andi?
+
+
+Mahasiswa diminta menyelesaikan seluruh perhitungan tersebut melalui algoritma yang dirancang sendiri.
+D. Tugas Mahasiswa
+Berdasarkan narasi permasalahan di atas, buatlah rancangan algoritma untuk membangun program sistem penggajian 
+karyawan dengan ketentuan berikut:
+1.	Analisis permasalahan: Identifikasi permasalahan dan kebutuhan sistem berdasarkan narasi.
+2.	Input dan Output: Tentukan data yang harus dimasukkan dan informasi yang harus ditampilkan.
+3.	Variabel: Tentukan variabel yang dibutuhkan untuk menyimpan seluruh data dan hasil perhitungan.
+4.	Tipe Data: Tentukan tipe data yang tepat untuk setiap variabel.
+5.	Operator: Tentukan operator yang digunakan untuk melakukan perhitungan gaji, lembur, pajak, dan gaji bersih.
+6.	Percabangan: Tentukan kondisi yang diperlukan untuk membedakan jabatan karyawan serta menentukan apakah karyawan 
+    memperoleh upah lembur.
+7.	Perulangan: Tentukan bagaimana program dapat memproses data banyak karyawan secara berulang.
+8.	Pseudocode: Susun algoritma penyelesaian masalah menggunakan pseudocode.
+9.	Flowchart: Gambarkan alur proses sistem penggajian menggunakan flowchart.
+E. Pertanyaan untuk Menguji Pemahaman
+1.	Mengapa program membutuhkan variabel untuk menyimpan data karyawan?
+2.	Tipe data apa yang tepat untuk menyimpan nama, NIK, jabatan, dan jumlah jam kerja?
+3.	Bagaimana menentukan tarif upah berdasarkan jabatan karyawan?
+4.	Operator apa saja yang diperlukan untuk menghitung gaji pokok dan upah lembur?
+5.	Bagaimana menentukan apakah seorang karyawan mendapatkan upah lembur?
+6.	Bagaimana program menghitung potongan pajak sebesar 5%?
+7.	Mengapa diperlukan percabangan dalam proses penghitungan gaji?
+8.	Mengapa diperlukan perulangan dalam program penggajian?
+9.	Apakah penggunaan FOR atau WHILE lebih tepat untuk kasus ini? Jelaskan alasannya.

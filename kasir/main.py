@@ -13,7 +13,7 @@ print("=-=" * 35)
 
 data_pegawai = {
     "0001": {"nama": "Thanos", "username": "thanos_123", "password": "123"},
-    "0002": {"nama": "Saber", "username": "saber_123", "password": "123"},
+    "0002": {"nama": "Saber", "username": "saber_123", "password": "admin"},
     "0003": {"nama": "Balmond", "username": "balmond_123", "password": "123"}
 }
 
